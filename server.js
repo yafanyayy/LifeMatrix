@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Static files
-app.use(express.static('client/build'));
+app.use(express.static('web/build'));
 
 // API routes
 app.use('/api', routes);
@@ -46,7 +46,7 @@ app.get('/health', (req, res) => {
 
 // Serve React app for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'web/build', 'index.html'));
 });
 
 // Initialize database and start server
