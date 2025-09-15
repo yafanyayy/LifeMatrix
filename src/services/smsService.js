@@ -117,9 +117,7 @@ How was your day yesterday? Please rate each area (1-10):
 
 Reply with your scores like: "8,7,9,Spent time with family"
 
-Or visit: ${process.env.BASE_URL || 'http://localhost:3001'}/survey
-
-Thank you for participating! 🙏`;
+Or visit: ${process.env.BASE_URL || 'http://localhost:3001'}/survey`;
   }
 
   generateFeedbackMessage(scores) {
@@ -152,7 +150,7 @@ ${this.getMotivationalMessage(average)}`;
     } else if (avg >= 4) {
       return "💪 Keep going! Every day is a chance to grow!";
     } else {
-      return "🤗 Remember, it's okay to have tough days. Tomorrow is a new opportunity!";
+      return "🤗 Remember, it's okay to have tough days. Today is a new opportunity!";
     }
   }
 

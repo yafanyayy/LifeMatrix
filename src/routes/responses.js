@@ -17,8 +17,8 @@ router.post('/', async (req, res) => {
     }
 
     // Validate score ranges
-    const scores = [joy_score, achievement_score, meaningfulness_score];
-    for (const score of scores) {
+    const scoreArray = [joy_score, achievement_score, meaningfulness_score];
+    for (const score of scoreArray) {
       if (score < 1 || score > 10 || !Number.isInteger(score)) {
         return res.status(400).json({ 
           success: false, 
